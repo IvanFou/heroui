@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+:root{
+    --mainFont:'Roboto', sans-serif;
+    --primaryColor: #1B90FC;
+    --background: #202020;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: Roboto;
+}
+  
+
+.wrapper{
+    max-inline-size: 100%;
+    border: none;
+}
+
+p,h1{
+    margin: 0;
+}
+
+.card{
+    max-inline-size: 412px;
+    color: white;
+    margin-top: -10%;
+    z-index: 2;
+    position: relative;
+}
+
+
+.hero h1{
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 0.7rem;
+}
+
+.hero p{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0.7rem;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: row;
+    block-size: 768px;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.hero::before{
+    content: '';
+    inline-size: 50%;
+    display: block;
+    background: var(--background);
+    position: absolute;
+    inset-block: 0;
+    z-index: 1;
+    clip-path: polygon(0 0, calc(100% - 151px) 0, 100% 100%, 0 100% );
+  
+}
+
+.hero::before{
+    content: '';
+    inline-size: 50%;
+    display: block;
+    background: var(--background);
+    position: absolute;
+    inset-block: 0;
+    z-index: 1;
+    clip-path: polygon(0 0, calc(100% - 200/px) 0, 100% 100%, 0 100% );
+}
+
+.hero{
+    background-image: url('../images/hawkeye.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(90% - 128px), 0 85%);
+}
+
+
+#logo{
+    position: static;
+    width: 148px;
+    height: 80px;
+    left: 0px;
+    top: 0px;   
+}
+
+button{
+    width: 120.47px;
+    height: 35px;
+    border-radius: 52.71px;
+    border: none;
+    background-color: var(--primaryColor);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+
+    .hero {
+     background-size: 100%;
+     background-color: #202020;
+     background-position: top;
+     background-attachment: scroll;
+     clip-path: polygon(0 0, 100% 0, 100% calc(99% - 90px), 0 99%);
+    }
+    
+    .hero::before{
+      inline-size: 1%;
+      clip-path: none;
+    
+    }
+    
+    .hero-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .card{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;  
+      margin-bottom: 30%;
+    }
+    
+    button {
+      flex: 1;
+    }
+    
+    #logo{
+        position: static;
+        width: 118px;
+        height: 50px;
+        left: 0px;
+        top: 0px;   
+    } 
+}
+
+@media screen and (max-width: 400px) {
+
+    .hero {
+     background-size: 100%;
+     background-color: #202020;
+     background-position: top;
+     background-attachment: scroll;
+     clip-path: polygon(0 0, 100% 0, 100% calc(90% - 90px), 0 87%);
+    }
+    
+    .hero::before{
+      inline-size: 1%;
+      clip-path: none;
+    }
+
+    .hero h1{
+        font-weight: 500;
+        font-size: 35px;
+        margin-bottom: 0.7rem;
+    }
+    
+    .hero p{
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 0.7rem;
+    }
+    
+    .hero-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .card{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;  
+      margin-bottom: 90%;
+  
+    }
+    
+    button {
+      flex: 1;
+    }
+    
+    #logo{
+        position: static;
+        width: 118px;
+        height: 50px;
+        left: 0px;
+        top: 0px;   
+    } 
+
+}
